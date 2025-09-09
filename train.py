@@ -63,10 +63,11 @@ class VoxtralDataCollator:
             p_att = prompt_attn[i].tolist()
             t_ids = text_ids_list[i]
 
-            ids  = p_ids + t_ids
-            attn = p_att + [1] * len(t_ids)
+            ids  = p_ids + t_ids + [tok.eos_token_id]
+            attn = p_att + [1] * (len(t_ids) + 1) 
             # labels: mask prompt tokens, learn only on text tokens
-            lab  = [-100] * len(p_ids) + t_ids
+            lab  = [-100] * len(p_ids) + t_ids + [tok.eos_token_id]
+
 
             input_ids.append(ids)
             attention_mask.append(attn)
