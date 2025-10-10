@@ -1,6 +1,6 @@
 # Finetune Voxtral for ASR with Transformers 🤗
 
-This repository fine-tunes the [Voxtral](https://huggingface.co/Deep-unlearning/Voxtral) speech model on conversational speech datasets using the Hugging Face `transformers` and `datasets` libraries.
+This repository fine-tunes the [Voxtral](https://huggingface.co/mistralai/Voxtral-Mini-3B-2507) speech model on conversational speech datasets using the Hugging Face `transformers` and `datasets` libraries.
 
 ## Installation
 
